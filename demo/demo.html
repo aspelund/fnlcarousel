@@ -6,6 +6,11 @@
     </head>
     <body>
         <h1>fnlSlider Demo</h1>
+        <p>The DOM hierarchy for the elements to be used by fnlSlider is easy: outer div, relative positioned,
+        first child of that div is of class .container, items can be named and styled as you want, just remember 
+        to add the class name in the callback function that you provide to fnlSlider for item rendering.<br/>
+        Classes <i>button</i>, <i>left</i>, <i>right</i>, <i>pageButton</i> and <i>curPage</i> are used to style
+        navigation buttons.</p>
         <style>
             body {
                 font-family:arial;
@@ -87,14 +92,29 @@
         </div>
         <script>
 (function($){
+            /**
+             * Just some test data to be send to the fnlSlider.
+             * */
             var testData = [];
             for(var i=0;i<30;i++){
                 testData[i] = "Test " + i;
             }
+            
+            /**
+             * The template function is a callback function that fnlSlider calls when it needs to render
+             * a new item.
+             * The template function takes one data item from the data that you provide when calling the
+             * fnlSlider.
+             * */
             var myTemplateFunction = function(dataItem){
                 return $("<div></div>").addClass('demoItem').html(dataItem);
             };
-            $("#demo").fnlSlider({data:testData, templateFunction:myTemplateFunction, pageButtonSpacing:18, itemsPerPage:4});    
+                        
+            $("#demo").fnlSlider({
+                    data:testData, // some data
+                    templateFunction:myTemplateFunction, // the callback function that renders an item
+                    pageButtonSpacing:18, 
+                    itemsPerPage:4});    
             
     
 })(jQuery);            
