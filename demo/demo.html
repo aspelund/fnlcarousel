@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>fnlSlider demo</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+        <script src="fnlslider.js" ></script>
+    </head>
+    <body>
+        <h1>fnlSlider Demo</h1>
+        <style>
+            body {
+                font-family:arial;
+            }
+            #demo {
+                width:412px;
+                height:126px;
+                overflow:hidden;
+                position:relative;
+            }
+            #demo .container {
+                width:416px;
+                height:100px;            
+                background-color:#fff;
+                position:absolute;
+                
+            }
+            #demo .demoItem {   
+                line-height:100px;
+                text-align:center;
+                font-weight:bold;
+                font-family:arial;
+                display:inline-block;
+                width:100px;
+                height:100px;
+                background-color:#ffccff;
+                margin:0 4px 0 0;
+                padding:0;
+            }
+            #demo .button {
+                cursor:pointer;
+                position:absolute;
+                top:106px;
+                width:0px;
+                height:21px;
+                
+            }
+            #demo .left {   
+                left:0;                
+                width:0px;
+                height:0px;
+                border:10px solid rgba(0,0,0,0);
+                border-right:16px solid black;
+                
+            }
+            #demo .right {
+                right:0;
+                width:0px;
+                height:0px;
+                border:10px solid rgba(0,0,0,0);
+                border-left:16px solid black;
+            }
+            #demo .pageButtons {
+                width:10px;
+                height:10px;
+                top:112px;
+                position:absolute;
+                cursor:pointer; 
+                border-radius:6px;
+                background-color:#999999;
+                z-index:10;
+            }
+            #demo .pageButtons.curPage {
+                background-color:#000000;
+            }
+        </style>        
+        <div id="demo">
+            <div class="container">
+                <div class="demoItem">
+                    Test 0
+                </div><div class="demoItem">
+                    Test 1
+                </div><div class="demoItem">
+                    Test 2
+                </div><div class="demoItem">
+                    Test 3
+                </div>
+            </div>
+        </div>
+        <script>
+(function($){
+            var testData = [];
+            for(var i=0;i<30;i++){
+                testData[i] = "Test " + i;
+            }
+            var myTemplateFunction = function(dataItem){
+                return $("<div></div>").addClass('demoItem').html(dataItem);
+            };
+            $("#demo").fnlSlider({data:testData, templateFunction:myTemplateFunction, pageButtonSpacing:18, itemsPerPage:4});    
+            
+    
+})(jQuery);            
+        </script>
+    </body>
+</html>
