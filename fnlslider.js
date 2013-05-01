@@ -54,7 +54,7 @@
               return;
           var page = getPageDiv(pageIndex);
           var oldPage = $(".container", self);
-          var pageWidth = $(self).width();
+          var pageWidth = $(".container",self).width();
           $(page).css({left:pageWidth, opacity:1});
           $(self).append(page);
           $(oldPage).animate({left:-1*pageWidth}, 300, function(){$(this).remove();});
@@ -69,7 +69,7 @@
               return;
           var newPage = getPageDiv(pageIndex);
           var oldPage = $(".container", self);
-          var pageWidth = $(self).width();
+          var pageWidth = $(".container", self).width();
           $(newPage).css({left:-1*pageWidth, opacity:1});
           $(self).append(newPage);
           $(oldPage).animate({left:pageWidth}, 300, function(){$(this).remove();});
