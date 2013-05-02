@@ -1,13 +1,13 @@
 {
-    "name": "fnlslider",
-    "title": "fnlSlider",
-    "description": "jQuery plugin for creating horizontal sliders with left/right/page navigation.",
+    "name": "fnlcarousel",
+    "title": "fnlCarousel",
+    "description": "jQuery plugin for creating horizontal carousel with multiple items per page, with left/right/page navigation.",
     "keywords": [
-        "slider"
+        "carousel"
     ],
-    "version": "1.0.2",
+    "version": "1.0.3",
     "author": {
-        "name": "49lights AB / Mattias Aspelund",
+        "name": "Mattias Aspelund",
         "url": "http://www.49lights.com"
     },
     "maintainers": [
@@ -23,10 +23,10 @@
             "url": "https://github.com/aspelund/fnlslider/blob/master/license.txt"
         }
     ],
-    "bugs": "https://github.com/aspelund/fnlslider/issues",
-    "homepage": "https://github.com/aspelund/fnlslider",
-    "docs": "https://github.com/aspelund/fnlslider/blob/master/README.md",
-    "download": "https://github.com/aspelund/fnlslider/archive/master.zip",
+    "bugs": "https://github.com/aspelund/fnlcarousel/issues",
+    "homepage": "https://github.com/aspelund/fnlcarousel",
+    "docs": "https://github.com/aspelund/fnlcarousel/blob/master/README.md",
+    "download": "https://github.com/aspelund/fnlcarousel/archive/master.zip",
     "dependencies": {
         "jquery": ">=1.5"
     }
